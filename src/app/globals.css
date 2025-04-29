@@ -1,8 +1,55 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: none;
+  scrollbar-color: #4ade80 #22c55e;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 🌟 BASE COLORS */
+  --background: 0 0% 98%;
+  --foreground: 215 28% 17%;
+
+  /* 🎨 BRAND COLORS */
+  --brand-primary: 142 71% 56%;
+  --brand-accent: 142 71% 45%;
+  --brand-success: 142 71% 45%;
+  --brand-danger: 0 84% 60%;
+  --brand-warning: 38 92% 50%;
+
+  /* 🧩 UI COLORS */
+  --ui-background: 0 0% 98%;
+  --ui-card: 0 0% 100%;
+  --ui-header: 220 14% 96%;
+  --ui-footer: 220 14% 96%;
+  --ui-divider: 216 12% 90%;
+
+  /* 📝 TEXT COLORS */
+  --text-primary: 215 28% 17%;
+  --text-secondary: 215 19% 35%;
+  --text-muted: 215 16% 65%;
+  --text-light: 210 20% 98%;
+
+  /* 🏷️ TAG COLORS */
+  --tag-blue: 214 100% 94%;
+  --tag-blue-text: 221 83% 53%;
+  --tag-green: 141 79% 94%;
+  --tag-green-text: 142 76% 36%;
+  --tag-purple: 270 100% 95%;
+  --tag-purple-text: 269 80% 56%;
+  --tag-yellow: 60 94% 85%;
+  --tag-yellow-text: 50 96% 40%;
+
+  /* ⚡ STATUS COLORS */
+  --status-active: 141 79% 94%;
+  --status-active-text: 142 76% 36%;
+  --status-info: 214 100% 94%;
+  --status-info-text: 221 83% 53%;
+  --status-pending: 60 94% 85%;
+  --status-pending-text: 50 96% 40%;
 }
 
 @theme inline {
@@ -14,13 +61,44 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
+
+    /* 🌑 DARK MODE UI COLORS */
+    --ui-background: 0 0% 4%;
+    --ui-card: 0 0% 10%;
+    --ui-header: 0 0% 9%;
+    --ui-footer: 0 0% 9%;
+    --ui-divider: 0 0% 15%;
+
+    /* 🌑 DARK MODE TEXT COLORS */
+    --text-primary: 0 0% 93%;
+    --text-secondary: 0 0% 64%;
+    --text-muted: 0 0% 45%;
+    --text-light: 210 20% 98%;
+
+    /* 🌑 DARK MODE TAG COLORS */
+    --tag-blue: 221 64% 33%;
+    --tag-blue-text: 214 97% 79%;
+    --tag-green: 144 61% 20%;
+    --tag-green-text: 140 77% 73%;
+    --tag-purple: 275 67% 32%;
+    --tag-purple-text: 265 97% 85%;
+    --tag-yellow: 35 71% 26%;
+    --tag-yellow-text: 56 97% 77%;
+
+    /* 🌑 DARK MODE STATUS COLORS */
+    --status-active: 144 61% 20%;
+    --status-active-text: 140 77% 73%;
+    --status-info: 221 64% 33%;
+    --status-info-text: 214 97% 79%;
+    --status-pending: 35 71% 26%;
+    --status-pending-text: 56 97% 77%;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
