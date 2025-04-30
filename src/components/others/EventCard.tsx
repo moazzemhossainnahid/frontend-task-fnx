@@ -4,7 +4,6 @@ import Image from "next/image";
 import { TbCoinTakaFilled } from "react-icons/tb";
 import { GiNetworkBars } from "react-icons/gi";
 
-// Type definitions
 type EventCardProps = {
   title: string;
   date: string;
@@ -19,7 +18,6 @@ type EventCardProps = {
   attending: string;
 };
 
-// Fake data for the three event cards
 const eventData: EventCardProps[] = [
   {
     title: "Legends Rise on the Field",
@@ -65,7 +63,6 @@ const eventData: EventCardProps[] = [
   },
 ];
 
-// Single Event Card Component
 const EventCard: React.FC<{ event: EventCardProps }> = ({ event }) => {
   return (
     <div className="w-full rounded-3xl pb-3 border-b overflow-hidden flex flex-col bg-white">
@@ -146,7 +143,6 @@ const EventCard: React.FC<{ event: EventCardProps }> = ({ event }) => {
   );
 };
 
-// Event Cards Carousel Component
 const EventCards: React.FC = () => {
   return (
     <div className="w-full mx-auto p-10 bg-gray-50">

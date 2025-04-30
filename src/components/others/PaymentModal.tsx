@@ -23,7 +23,6 @@ export default function PaymentModal({
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
       <div className="bg-emerald-600 text-white rounded-lg w-80 p-6 relative">
-        {/* Close button */}
         <button
           onClick={onClose}
           className="absolute right-4 top-4 text-white hover:text-gray-200"
@@ -42,7 +41,6 @@ export default function PaymentModal({
           </svg>
         </button>
 
-        {/* Icon and title */}
         <div className="flex flex-col items-center mb-6">
           <div className="bg-emerald-600 p-2 rounded-lg mb-2">
             <Image
@@ -58,7 +56,6 @@ export default function PaymentModal({
           </h2>
         </div>
 
-        {/* Payment options */}
         <div className="space-y-4 mb-6">
           <div
             className="flex items-start cursor-pointer"
@@ -127,7 +124,6 @@ export default function PaymentModal({
           </div>
         </div>
 
-        {/* Continue button */}
         <button
           onClick={onContinue}
           className="w-full bg-black text-white py-2 px-4 rounded-full font-medium"

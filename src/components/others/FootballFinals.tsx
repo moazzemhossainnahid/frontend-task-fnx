@@ -23,9 +23,7 @@ export default function FootballFinals() {
   };
 
   const handlePaymentContinue = () => {
-    // Handle payment processing logic here
     setIsPaymentModalOpen(false);
-    // You might want to redirect or show a confirmation message
   };
 
   return (
@@ -117,7 +115,6 @@ export default function FootballFinals() {
         </div>
       </div>
 
-      {/* Tabs navigation */}
       <div className="border-b border-gray-200 md:w-4/6">
         <div className="flex">
           <button
@@ -153,7 +150,6 @@ export default function FootballFinals() {
         </div>
       </div>
 
-      {/* Tab Content */}
       <div className="md:w-4/6 pt-10">
         {activeTab === "info" && <InfoTab />}
 
@@ -162,7 +158,6 @@ export default function FootballFinals() {
         {activeTab === "comments" && <CommentsTab />}
       </div>
 
-      {/* Payment Modal */}
       <PaymentModal
         isOpen={isPaymentModalOpen}
         onClose={handleClosePaymentModal}

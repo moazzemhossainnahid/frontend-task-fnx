@@ -7,7 +7,7 @@ import { SlCalender } from "react-icons/sl";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between w-full py-2 px-10">
+    <header className="flex items-center justify-between w-full font-satoshi py-2 px-10">
       {/* Logo */}
       <div className="flex items-center justify-start">
         <div className="w-10 h-10 flex items-center justify-center">
