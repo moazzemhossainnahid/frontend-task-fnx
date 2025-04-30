@@ -5,11 +5,28 @@ import { useState } from "react";
 import InfoTab from "../Tabs/InfoTab";
 import PlayerTab from "../Tabs/PlayerTab";
 import CommentsTab from "../Tabs/CommentsTab";
+import PaymentModal from "./PaymentModal";
 
 export default function FootballFinals() {
   const [activeTab, setActiveTab] = useState<"info" | "player" | "comments">(
     "info"
   );
+
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+
+  const handleOpenPaymentModal = () => {
+    setIsPaymentModalOpen(true);
+  };
+
+  const handleClosePaymentModal = () => {
+    setIsPaymentModalOpen(false);
+  };
+
+  const handlePaymentContinue = () => {
+    // Handle payment processing logic here
+    setIsPaymentModalOpen(false);
+    // You might want to redirect or show a confirmation message
+  };
 
   return (
     <div className="max-w-7xl mx-auto mt-10">
@@ -91,7 +108,10 @@ export default function FootballFinals() {
             </div>
           </div>
 
-          <button className="w-full bg-emerald-400 text-black py-3 px-4 rounded-3xl font-bold">
+          <button
+            className="w-full bg-emerald-400 text-black py-3 px-4 rounded-3xl font-bold"
+            onClick={handleOpenPaymentModal}
+          >
             Join event
           </button>
         </div>
@@ -141,6 +161,13 @@ export default function FootballFinals() {
 
         {activeTab === "comments" && <CommentsTab />}
       </div>
+
+      {/* Payment Modal */}
+      <PaymentModal
+        isOpen={isPaymentModalOpen}
+        onClose={handleClosePaymentModal}
+        onContinue={handlePaymentContinue}
+      />
     </div>
   );
 }
